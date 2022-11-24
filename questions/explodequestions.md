@@ -5,10 +5,14 @@ Q2 - The code template appears when you double-click on the object in design mod
 
 Q3 - Start() and Stop()
 
-Q4 - 
+Q4 - "Private"?
 
 Q5 - Event procedure.
 
 Q6 - An IF statement is used.
 
 Q7 - The condition used is whether the frame variable is above ten; that is, whether the animation is on its last frame.
+
+Q8 - It means that it resets the frame to 0, so the next time the user clicks the button, there is another explosion.
+
+Q9 - I do not remember.
