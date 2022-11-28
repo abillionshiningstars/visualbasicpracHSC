@@ -3,11 +3,11 @@ Q1 - a) Set the visibility to False.
 
 Q2 - The code template appears when you double-click on the object in design mode.
 
-Q3 - Start() and Stop()
+Q3 - Start() and Stop().
 
-Q4 - "Private"?
+Q4 - "Private", "Static"
 
-Q5 - Event procedure.
+Q5 - Another name for an event handler is an event procedure.
 
 Q6 - An IF statement is used.
 
@@ -15,4 +15,4 @@ Q7 - The condition used is whether the frame variable is above ten; that is, whe
 
 Q8 - It means that it resets the frame to 0, so the next time the user clicks the button, there is another explosion.
 
-Q9 - I do not remember.
+Q9 - 100.
