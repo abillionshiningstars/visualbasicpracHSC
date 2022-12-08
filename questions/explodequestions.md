@@ -3,7 +3,7 @@ Q1 - a) Set the visibility to False.
 
 Q2 - The code template appears when you double-click on the object in design mode.
 
-Q3 - Start() and Stop().
+Q3 - Start() and Stop()
 
 Q4 - "Private", "Static"
 
