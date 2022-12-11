@@ -5,5 +5,4 @@ Q7 - The arguments are imlWolf.Images.Item(WhichImage), X, and Y.
 Q8 - `Dim MyArea As New Rectangle (72, 48, 112, 64)`
 
 Q10 - ```
-WhichImage = (WhichImage + 1) Mod 3
-```
+WhichImage = (WhichImage + 1) Mod 3```
