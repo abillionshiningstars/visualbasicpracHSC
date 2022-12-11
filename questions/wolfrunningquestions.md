@@ -2,4 +2,4 @@ Q6 - FillRectangle creates a filled shape whereas DrawRectangle only creates an 
 
 Q7 - The arguments are imlWolf.Images.Item(WhichImage), X, and Y.
 
-Q8 - Dim MyArea As New Rectangle (72, 48, 112, 64)
+Q8 - `Dim MyArea As New Rectangle (72, 48, 112, 64)`
