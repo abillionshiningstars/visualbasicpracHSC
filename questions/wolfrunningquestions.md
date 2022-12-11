@@ -9,4 +9,4 @@ Dim X As Integer = 0, Y As Integer = 10
 Private Sub Form1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles MyBase.Paint
   objBackground = Me.CreateGraphics 
   objBackground.DrawImage(imlElsa.Images.Item(0), X, Y)
-End Sub``
+End Sub```
