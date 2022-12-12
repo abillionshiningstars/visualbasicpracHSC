@@ -1,4 +1,4 @@
-//  Created by Akira Li (yes hi ms chen that is me) on 25/10/2022-12/10/2022.
+//  created by Akira Li (yes hi ms chen that is me) on 25/10/2022-12/10/2022.
 //
 
 import SwiftUI
@@ -9,7 +9,7 @@ import AVFoundation
 struct ContentView: View {
     // a variable determining whether the button has been pressed or not
     @State private var navigated = false
-    
+    // body
     var body: some View {
         VStack(alignment: .center, spacing: 0.0) {
             Text("Café solitude")
@@ -50,15 +50,15 @@ struct ContentView: View {
             ContentView()
         }
     }
-
+// shared instance allows it so that multiple can be played at once
 let audioSession = AVAudioSession.sharedInstance()
-
+// I'm creating a function for each audio player
 private func initPlayer(_ filename: String) -> AVAudioPlayer {
     let path: String! = Bundle.main.resourcePath?.appending("/\(filename).mp3")
     let mp3 = NSURL(fileURLWithPath: path)
     var player: AVAudioPlayer = AVAudioPlayer()
     do {
-        try audioSession.setCategory(.ambient)
+        try audioSession.setCategory(.ambient) // ambient category allows sounds to be played over external music and each other
         player = try AVAudioPlayer(contentsOf: mp3 as URL)
         player.prepareToPlay() //prepares it to play
     } catch {
@@ -76,21 +76,25 @@ struct MainView: View {
     @State private var fp = false
     @State private var rp = false
     @State private var wp = false
+    // variable declaration
     @State var coffeePlayer = initPlayer("cafe-ambience-sound")
     @State var firePlayer = initPlayer("free-flame-sound")
     @State var rainPlayer = initPlayer("free-rain-and-thunder-audio-loop")
     @State var wavePlayer = initPlayer("water-white-noise-sound")
+    //audio player declaration
+    
     var body: some View {
+        // creates a vertical stack for the grid
             VStack(spacing: 40) {
                 Text("Mix and match sounds to create \n a calming atmosphere")
                     .fontWeight(.medium)
                     .padding()
                     .multilineTextAlignment(.center)
-                // creates a vertical stack for the grid
+                // guidance text??
                 HStack(spacing: 40) {
                     Button(action: {
-                        if (!fp){
-                            firePlayer.numberOfLoops = -1
+                        if (!fp){ // control structure is so that if it's not already playing, the sound is played when clicked
+                            firePlayer.numberOfLoops = -1 // infinite loop until paused
                             self.firePlayer.play()
                         }
                         else {
@@ -98,9 +102,11 @@ struct MainView: View {
                         }
                         fp.toggle()
                         }, label: {
-                            Image("icons8-campfire-90").renderingMode(.template).foregroundColor(Color.orange)
+                            Image("icons8-campfire-90").renderingMode(.template).foregroundColor(Color.orange) // rendering mode allows it to be able to be set to another colour
                         })
-                        .aspectRatio(1.0, contentMode: .fit)
+                        .aspectRatio(1.0, contentMode: .fit) // so that it would be aligned
+                    // every other button follows very similar code
+                    
                     Button(action: {
                         if (!cp){
                             coffeePlayer.numberOfLoops = -1
@@ -144,7 +150,7 @@ struct MainView: View {
                         })
                         .aspectRatio(1.0, contentMode: .fit)
                 }
-                Text("Click the button again to pause")
+                Text("Click the button again to pause") // I thought this would be self explanatory, but I'm the developer and how would a user know this
                     .fontWeight(.medium)
                     .padding()
                     .multilineTextAlignment(.center)
@@ -159,5 +165,6 @@ struct HelpMe: View {
         Text("help me")
             .padding()
     }
+    // help me
     
 }
