@@ -22,7 +22,7 @@ Class Form1
             WhichImage = (WhichImage + 1) Mod 9
             objBackground.DrawImage(imlElsaRight.Images.Item(WhichImage), X, Y)
             If X >= Me.Width Then 
-                X = Me.Width - 1 ' Elsa cannot veer off the page, sorry elsa
+                X = -96 ' Elsa cannot veer off the page, sorry elsa
             End If
         End If
         If e.KeyCode = Keys.Left Then
@@ -32,7 +32,7 @@ Class Form1
             WhichImage = (WhichImage + 1) Mod 9
             objBackground.DrawImage(imlElsaLeft.Images.Item(WhichImage), X, Y)
             If X <= -96 Then 
-                X = -95 ' Elsa cannot veer off the page, sorry elsa (second time round)
+                X = Me.Width ' Elsa cannot veer off the page, sorry elsa (second time round)
             End If
         End If
     End Sub
