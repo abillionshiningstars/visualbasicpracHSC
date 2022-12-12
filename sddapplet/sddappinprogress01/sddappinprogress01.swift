@@ -2,7 +2,7 @@
 //  sddappinprogress01App.swift
 //  sddappinprogress01
 //
-//  Created by Maggie on 25/10/2022.
+//  Created by Akira on 25/10/2022.
 //
 
 import SwiftUI
